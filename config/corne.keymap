@@ -28,7 +28,7 @@
 
     macros {
         l_brk: l_brk {
-            label: "l_brk";
+            label = "l_brk";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -38,7 +38,7 @@
                 ;
         };
         r_brk: r_brk {
-            label: "r_brk";
+            label = "r_brk";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
