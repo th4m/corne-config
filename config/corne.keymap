@@ -26,27 +26,6 @@
     };
 
 
-    macros {
-        l_brk: l_brk {
-            label: "l_brk";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp N8>
-                , <&macro_release &kp RALT>
-        };
-        r_brk: r_brk {
-            label: "r_brk";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp RALT>
-                , <&macro_tap &kp N9>
-                , <&macro_release &kp RALT>
-        };
-    }
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,7 +40,7 @@
 
         lower_layer {
             bindings = <
-&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                    &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                    &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
 &trans &trans &trans &trans &trans &trans                    &trans    &trans &trans &trans  &trans   &trans
 &trans &trans &trans &trans &trans &kp HOME                  &kp PG_UP &trans &kp LT &kp GT  &kp PIPE &kp TILDE
                             &trans &kp END  &kp DEL   &trans &kp PG_DN &trans
