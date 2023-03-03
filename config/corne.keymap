@@ -26,6 +26,29 @@
     };
 
 
+    macros {
+        l_brk: l_brk {
+            label: "l_brk";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp RALT>
+                ;
+        };
+        r_brk: r_brk {
+            label: "r_brk";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N9>
+                , <&macro_release &kp RALT>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
