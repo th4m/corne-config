@@ -87,6 +87,44 @@
                 , <&macro_release &kp RALT>
                 ;
         };
+        zm_lt: zm_lt {
+            label = "zm_lt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp NUBS>
+                ;
+        };
+        zm_gt: zm_gt {
+            label = "zm_gt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp NUBS>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+        zm_pipe: zm_pipe {
+            label = "zm_pipe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp NUBS>
+                , <&macro_release &kp RALT>
+                ;
+        };
+        zm_tilde: zm_tilde {
+            label = "zm_tilde";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp RBRC>
+                , <&macro_release &kp RALT>
+                ;
+        };
     };
 
     keymap {
@@ -105,7 +143,7 @@
             bindings = <
 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                    &kp F7    &kp F8 &kp F9 &kp F10 &kp F11  &kp F12
 &trans &trans &trans &trans &trans &trans                    &trans    &trans &trans &trans  &trans   &trans
-&trans &trans &trans &trans &trans &kp HOME                  &kp PG_UP &trans &kp LT &kp GT  &kp PIPE &kp TILDE
+&trans &trans &trans &trans &trans &kp HOME                  &kp PG_UP &trans &zm_lt &zm_gt  &zm_pipe &zm_tilde
                             &trans &kp END  &kp DEL   &trans &kp PG_DN &trans
             >;
         };
