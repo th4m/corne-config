@@ -123,6 +123,7 @@
                 = <&macro_press &kp RALT>
                 , <&macro_tap &kp RBRC>
                 , <&macro_release &kp RALT>
+                , <&macro_tap &kp SPACE>
                 ;
         };
     };
