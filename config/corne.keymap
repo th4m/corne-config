@@ -121,7 +121,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp RALT>
-                , <&macro_tap &kp RBRC>
+                , <&macro_tap &kp RBKT>
                 , <&macro_release &kp RALT>
                 , <&macro_tap &kp SPACE>
                 ;
