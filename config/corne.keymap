@@ -136,6 +136,15 @@
                 , <&macro_release &kp LCTRL &kp LSHFT>
                 ;
         };
+        ij_run_prev: ij_run_prev {
+            label = "ij_run_prev";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp F10>
+                ;
+        };
     };
 
     keymap {
@@ -152,10 +161,10 @@
 
         lower_layer {
             bindings = <
-&kp F1    &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                  &kp F7   &kp F8    &kp F9 &kp F10 &kp F11  &kp F12
-&ij_run   &trans &trans &trans &trans &trans                  &kp HOME &kp PG_UP &trans &trans  &trans   &kp EQUAL
-&kp PSCRN &trans &trans &trans &trans &trans                  &kp END  &kp PG_DN &zm_lt &zm_gt  &zm_pipe &zm_tilde
-                               &trans &trans &kp DEL   &trans &trans   &trans
+&kp F1    &kp F2 &kp    F3 &kp F4 &kp F5 &kp F6                      &kp F7   &kp F8    &kp F9 &kp F10 &kp F11  &kp F12
+&ij_run   &ij_run_prev  &trans &trans &trans &trans                  &kp HOME &kp PG_UP &trans &trans  &trans   &kp EQUAL
+&kp PSCRN &trans        &trans &trans &trans &trans                  &kp END  &kp PG_DN &zm_lt &zm_gt  &zm_pipe &zm_tilde
+                                      &trans &trans &kp DEL   &trans &trans   &trans
             >;
         };
 
